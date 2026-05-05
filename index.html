@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.171a766f.css">
-<script src="/assets/js/runtime~main.aa2a9859.js" defer="defer"></script>
-<script src="/assets/js/main.be03b220.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f00e819f.js" defer="defer"></script>
+<script src="/assets/js/main.f371d7d2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -35,6 +35,14 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-project-adds">Co tento projekt přidává<a href="#what-this-project-adds" class="hash-link" aria-label="Přímý odkaz na Co tento projekt přidává" title="Přímý odkaz na Co tento projekt přidává" translate="no">​</a></h2>
 <p><a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">Dokumentace Qiskit</a> od IBM je open-source (CC BY-SA 4.0), ale jejich webová aplikace není. doQumentation přidává open-source frontend s živým spouštěním kódu, automatickým vkládáním přihlašovacích údajů a simulátorovým módem.</p>
 <p>Nasaditelný kdekoliv — od <a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a> přes <a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a> až po <a href="https://rasqberry.org/" target="_blank" rel="noopener noreferrer" class="">RasQberry</a>. Viz <a class="" href="/features">všechny funkce</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-youre-ready-for-more">Až budeš připraven na víc<a href="#when-youre-ready-for-more" class="hash-link" aria-label="Přímý odkaz na Až budeš připraven na víc" title="Přímý odkaz na Až budeš připraven na víc" translate="no">​</a></h2>
+<p>doQumentation ti pomáhá udělat <strong>první kroky s Qiskitem</strong> — číst, spouštět kód a prozkoumávat — aniž bys musel cokoli instalovat. Až budeš chtít pokročit dál, přejdi na oficiální platformu IBM:</p>
+<ul>
+<li class=""><strong>Spoušt ěj na skutečném hardwaru</strong> — vytvoř si bezplatný <a href="https://quantum.cloud.ibm.com/registration" target="_blank" rel="noopener noreferrer" class="">účet IBM Cloud</a> a instanci Open Plan, abys mohl spouštět obvody na skutečných kvantových počítačích.</li>
+<li class=""><strong>Nejnovější obsah</strong> — <a href="https://quantum.cloud.ibm.com/learning" target="_blank" rel="noopener noreferrer" class="">vzdělávací platforma Qiskit</a> od IBM má nejnovější kurzy, tutoriály a doplňky (některé z nich nemusí být v doQumentation ještě k dispozici).</li>
+<li class=""><strong>Vyvíjej lokálně</strong> — <a href="https://docs.quantum.ibm.com/guides/install-qiskit" target="_blank" rel="noopener noreferrer" class="">nainstaluj si Qiskit</a> na svůj vlastní notebook pro vážnější vývojářskou práci.</li>
+</ul>
+<p><em>Postaveno na <a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">open-source dokumentaci IBM Quantum</a>. Děkujeme týmu IBM Quantum za to, že tento obsah zpřístupňuje volně pod licencí CC BY-SA 4.0.</em></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Jak začít<a href="#getting-started" class="hash-link" aria-label="Přímý odkaz na Jak začít" title="Přímý odkaz na Jak začít" translate="no">​</a></h2>
 <!-- -->
 <!-- -->
@@ -57,7 +65,7 @@
 <li class=""><strong>IBM Code Engine</strong> — Bezserverový Jupyter na tvém IBM Cloud účtu. Cold start v sekundách místo minut. <a class="" href="/jupyter-settings#code-engine">Nastavit</a></li>
 <li class=""><strong>Lokální Jupyter (Docker / RasQberry)</strong> — Připojuje se k lokálnímu serveru Jupyter s předinstalovaným Qiskit</li>
 <li class=""><strong>Vlastní server</strong> — Nasměruj na libovolný Jupyter endpoint v <a class="" href="/jupyter-settings#advanced">Nastavení</a></li>
-</ol><p>Když je dostupných více backendů, vyber který použít v <a class="" href="/jupyter-settings#backend-selection">Nastavení</a>.</p></div></div></details>
+</ol><p><strong>No IBM Quantum account?</strong> Enable <a href="/jupyter-settings#execution-mode">Simulator Mode</a> in Settings to run all code without signing up.</p><p>Když je dostupných více backendů, vyber který použít v <a class="" href="/jupyter-settings#backend-selection">Nastavení</a>.</p></div></div></details>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Možnosti nasazení</summary><div><div class="collapsibleContent_i85q"><p>doQumentation je k dispozici jako:</p><ul>
 <li class=""><strong><a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a></strong> — Statický web s <a href="https://mybinder.org" target="_blank" rel="noopener noreferrer" class="">Binder</a> nebo <a class="" href="/jupyter-settings#code-engine">IBM Code Engine</a> pro vzdálené spouštění kódu</li>
 <li class=""><strong><a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a></strong> — Plný stack lokálně, schopný fungovat offline</li>
