@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.ff3c4499.js" defer="defer"></script>
-<script src="/assets/js/main.6105a0e5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.76aebdf8.js" defer="defer"></script>
+<script src="/assets/js/main.9c3fea61.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -267,9 +267,9 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 </ol>
 <p>Právě jsme dokončili <code>Step 1: Mapping</code> tím, že jsme sestavili kvantové Circuit pro generování požadovaného kvantového stavu. Teď projíme zbývající kroky, abychom viděli výsledky.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="optimize">Optimize<a href="#optimize" class="hash-link" aria-label="Přímý odkaz na Optimize" title="Přímý odkaz na Optimize" translate="no">​</a></h3>
-<p>Zde nastavíme Backend pro spouštění Circuit – můžeš vybrat QPU s <code>least busy</code> (nejméně zaneprazdněný) ze svých přístupných skupin QPU, nebo jednoduze zvolit simulátor, pokud ti zbývá málo GPU času. Jakmile vyberš Backend, <code>pass_manager</code> transpiluje tvé Circuit do nativních sad Gate vybraného Backend a optimalizuje je, abys dostal/a lepší výsledky. <code>pass_manager</code> lze snadno deklarovat pomocí <code>generate_preset_pass_manager</code> a nastavením <code>optimization_level</code>, přičemž vyšší číslo znamená více optimalizačních kroků.</p>
+<p>Zde nastavíme Backend pro spouštění Circuit – můžeš vybrat QPU s <code>least busy</code> (nejméně zaneprazdněný) ze svých přístupných skupin QPU, nebo jednoduše zvolit simulátor, pokud ti zbývá málo GPU času. Jakmile vyberš Backend, <code>pass_manager</code> transpiluje tvé Circuit do nativních sad Gate vybraného Backend a optimalizuje je, abys dostal/a lepší výsledky. <code>pass_manager</code> lze snadno deklarovat pomocí <code>generate_preset_pass_manager</code> a nastavením <code>optimization_level</code>, přičemž vyšší číslo znamená více optimalizačních kroků.</p>
 <p>Dalším krokem je vzrušující věc – spustíme kvantový Circuit pomocí Qiskit Runtime!</p>
-<p>Udeděláme to pomocí dvou <a href="https://quantum.cloud.ibm.com/docs/guides/primitives" target="_blank" rel="noopener noreferrer" class="">Qiskit primitives</a>:</p>
+<p>Uděláme to pomocí dvou <a href="https://quantum.cloud.ibm.com/docs/guides/primitives" target="_blank" rel="noopener noreferrer" class="">Qiskit primitives</a>:</p>
 <ol>
 <li class=""><strong>Sampler</strong> vzorkuje výstupní registr z provedení jednoho nebo více kvantových Circuit. Jeho výstupem jsou počty na jednotlivých měřeních.</li>
 <li class=""><strong>Estimator</strong> vypočítává střední hodnotu jednoho nebo více pozorovatelných veličin vzhledem ke stavům generovaným kvantovým Circuit. Jeho výstupem jsou střední hodnoty spolu s jejich standardními chybami.</li>
