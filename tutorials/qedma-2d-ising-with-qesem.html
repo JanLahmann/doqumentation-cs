@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.7a646d4c.js" defer="defer"></script>
-<script src="/assets/js/main.02d467d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.eb9c5792.js" defer="defer"></script>
+<script src="/assets/js/main.d6a98d7e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -43,19 +43,19 @@
 </ul>
 <p>Poznámka: OBP obecně vrátí sadu možných nekomutujících observabilů. QESEM automaticky optimalizuje měřicí báze, když cílové observably obsahují nekomutující členy. Generuje kandidátní sady měřicích bází pomocí několika heuristických algoritmů a vybere sadu, která minimalizuje počet různých bází. To znamená, že QESEM seskupuje kompatibilní observably do společných bází, aby snížil celkový počet potřebných konfigurace měření a zlepšil efektivitu.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-qesem">O QESEM<a href="#about-qesem" class="hash-link" aria-label="Přímý odkaz na O QESEM" title="Přímý odkaz na O QESEM" translate="no">​</a></h2>
-<p>QESEM je spolehlivý, vysoce přesný software založený na charakterizaci, implementující efektivní, nestrannou kvaziprabilistickou chybovou mitigaci.
+<p>QESEM je spolehlivý, vysoce přesný software založený na charakterizaci, implementující efektivní, nestrannou kvaziprobabilistickou chybovou mitigaci.
 Je navržen pro mitigaci chyb v obecných kvantových Circuit a je aplikačně nezávislý. Byl ověřen na různých hardwarových platformách, včetně experimentů v utility měřítku na zařízeních IBM® Eagle a Heron. Fáze pracovního postupu QESEM jsou následující:</p>
 <ol>
 <li class="">Charakterizace zařízení – mapuje věrnosti Gate a identifikuje koherentní chyby, poskytuje kalibrační data v reálném čase. Tato fáze zajišťuje, že mitigace využívá operace s nejvyšší dostupnou věrností.</li>
 <li class="">Transpilace zohledňující šum – generuje a vyhodnocuje alternativní mapování Qubitů, sady operací a měřicí báze, vybírá variantu minimalizující odhadovanou dobu běhu QPU s volitelnou paralelizací pro urychlení sběru dat.</li>
 <li class="">Potlačení chyb – předefinuje nativní Gate, aplikuje Pauliho twirling a optimalizuje řízení na úrovni pulzů (na podporovaných platformách) pro zlepšení věrnosti.</li>
 <li class="">Charakterizace Circuitu – sestaví přizpůsobený lokální chybový model a přizpůsobí ho měřením QPU pro kvantifikaci reziduálního šumu.</li>
-<li class="">Chybová mitigace – konstruuje kvaziprabilistické dekompozice více typů a vzorkuje z nich v adaptivním procesu, který minimalizuje dobu QPU pro mitigaci a citlivost na výkyvy hardwaru, dosahuje vysoké přesnosti při velkých objemech Circuitu.</li>
+<li class="">Chybová mitigace – konstruuje kvaziprobabilistické dekompozice více typů a vzorkuje z nich v adaptivním procesu, který minimalizuje dobu QPU pro mitigaci a citlivost na výkyvy hardwaru, dosahuje vysoké přesnosti při velkých objemech Circuitu.</li>
 </ol>
 <p>Další informace o QESEM a experimentu v utility měřítku tohoto modelu na 103-Qubitovém podgrafu s vysokou konektivitou nativní geometrie heavy-hex zařízení <code>ibm_marrakesh</code> najdeš v <a href="https://arxiv.org/abs/2508.10997" target="_blank" rel="noopener noreferrer" class="">Reliable high-accuracy error mitigation for utility-scale quantum circuits</a>.
 <img decoding="async" loading="lazy" alt="Pracovní postup QESEM." src="/assets/images/QESEM_workflow-5ac8cd7e2bdf18df386786b67314693e.avif" width="2872" height="1208" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">Požadavky<a href="#requirements" class="hash-link" aria-label="Přímý odkaz na Požadavky" title="Přímý odkaz na Požadavky" translate="no">​</a></h2>
-<p>Před spuštěním notebooku nainstaluj následující Python balíčky:</p>
+<p>Před spuštěním notebooku nainstaluj n ásledující Python balíčky:</p>
 <ul>
 <li class="">Qiskit SDK v2.0.0 nebo novější (<code>pip install qiskit</code>)</li>
 <li class="">Qiskit Runtime v0.40.0 nebo novější (<code>pip install qiskit-ibm-runtime</code>)</li>
@@ -94,7 +94,7 @@ Je navržen pro mitigaci chyb v obecných kvantových Circuit a je aplikačně n
 Jde však o problém, který je pro klasické počítače obtížně řešitelný.</p>
 <p>QESEM nabízí dva režimy odhadu času, které tě informují o proveditelnosti tvých experimentů:</p>
 <ol>
-<li class="">Analytický odhad času – poskytuje velmi hrubý odhad a nevyžaduje ž ádný čas QPU. Lze ho využít k testování, zda by transpilační průchod potenciálně snížil čas QPU.</li>
+<li class="">Analytický odhad času – poskytuje velmi hrubý odhad a nevyžaduje žádný čas QPU. Lze ho využít k testování, zda by transpilační průchod potenciálně snížil čas QPU.</li>
 <li class="">Empirický odhad času (ukázaný zde) – poskytuje docela dobrý odhad a spotřebuje několik minut času QPU.</li>
 </ol>
 <p>V obou případech QESEM vrátí odhad času potřebného k dosažení požadované přesnosti pro <strong>všechny</strong> pozorovatelné veličiny.</p>

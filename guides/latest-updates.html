@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.7a646d4c.js" defer="defer"></script>
-<script src="/assets/js/main.02d467d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.eb9c5792.js" defer="defer"></script>
+<script src="/assets/js/main.d6a98d7e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -226,7 +226,7 @@
 <p>Hlavní novinky:</p>
 <ul>
 <li class="">
-<p><strong>Vlastní transpiler passes v C</strong> – Pište vlastní transpiler passes prostřednictvím Qiskitova C API s využitím nového objektu <code>QkDag</code> a rozšířeného objektu <code>QkTarget</code>, které umožňují postupnou inspekci, úpravu a rozšíření procesu kompilace – bez nutnosti znovu sestavovat celý Transpiler pipeline.</p>
+<p><strong>Vlastní transpiler passes v C</strong> – Piš vlastní transpiler passes prostřednictvím Qiskitova C API s využitím nového objektu <code>QkDag</code> a rozšířeného objektu <code>QkTarget</code>, které umožňují postupnou inspekci, úpravu a rozšíření procesu kompilace – bez nutnosti znovu sestavovat celý Transpiler pipeline.</p>
 </li>
 <li class="">
 <p><strong>Rychlejší výběr hardwarového rozmístění</strong> – Vylepšení a výkonnostní zlepšení řízená Rustem u <code>VF2Layout</code> a <code>VF2PostLayout</code> zvyšují rychlost a škálovatelnost výběru rozmístění Circuit na hardware, snižují kompilační režii a zlepšují věrnost na kvantovém hardware.</p>
@@ -310,7 +310,7 @@ Zlepšení zahrnují:</p>
 <li class="">Primitivy V1 již nejsou podporovány.</li>
 </ul><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-july-2024">3. července 2024<a href="#3-july-2024" class="hash-link" aria-label="Přímý odkaz na 3. července 2024" title="Přímý odkaz na 3. července 2024" translate="no">​</a></h3><ul>
 <li class="">
-<p>Následující endpointy jsou označeny jako zastaralé (deprecated) a budou odstraněny 3. října 2024 nebo po tomto datu: <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/tags/jobs#tags__jobs__operations__get_stream_jobs_state_updates" target="_blank" rel="noopener noreferrer" class=""><code>GET /stream/jobs</code></a> a <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/tags/jobs#tags__jobs__operations__get_stream_job_logs_jid" target="_blank" rel="noopener noreferrer" class=""><code>GET /stream/jobs/{id}</code></a>. Toto odstranění má následující dopady:</p>
+<p>N ásledující endpointy jsou označeny jako zastaralé (deprecated) a budou odstraněny 3. října 2024 nebo po tomto datu: <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/tags/jobs#tags__jobs__operations__get_stream_jobs_state_updates" target="_blank" rel="noopener noreferrer" class=""><code>GET /stream/jobs</code></a> a <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/tags/jobs#tags__jobs__operations__get_stream_job_logs_jid" target="_blank" rel="noopener noreferrer" class=""><code>GET /stream/jobs/{id}</code></a>. Toto odstranění má následující dopady:</p>
 <ul>
 <li class="">Po odstranění endpointů budou <code>job.stream_results()</code> a <code>job.interim_results()</code> odstraněny z klienta <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime" target="_blank" rel="noopener noreferrer" class="">qiskit-ibm-runtime</a>.</li>
 <li class="">Další metody, jako například <code>job.result()</code>, aktuálně využívají zastaralé endpointy. Upgraduj na <code>qiskit_ibm_runtime</code> 0.25 nebo novější před odstraněním endpointů, aby nedošlo k výpadku.</li>
@@ -406,7 +406,7 @@ Zlepšení zahrnují:</p>
 </ul><p>Začni prozkoumáním <a class="" href="/guides/functions">dokumentace Qiskit Functions</a>.</p><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-september-2024">16. září 2024<a href="#16-september-2024" class="hash-link" aria-label="Přímý odkaz na 16. září 2024" title="Přímý odkaz na 16. září 2024" translate="no">​</a></h3><ul>
 <li class="">
 <p>Představujeme náhled Qiskit Functions pro uživatele IBM Quantum Premium Plan. Začni pomocí <code>pip install qiskit-ibm-catalog</code> a prozkoumej <a class="" href="/guides/functions">dokumentaci Qiskit Functions</a>. S klientem Qiskit Functions Catalog můžeš odesílat úlohy do abstrahovaných služeb navržených pro urychlení tvého výzkumu. Přihlas se pomocí svých stávajících přihlašovacích údajů IBM Quantum Platform.</p>
-<p>Náhled katalogu Qiskit Functions Catalog poskytuje uživatelům Premium Plan přístup k prozkoum ání dostupných funkcí, včetně těch napsaných společností IBM a těch napsaných dalšími členy našeho ekosystému. Katalog obsahuje dva druhy funkcí: circuit functions a application functions.</p>
+<p>Náhled katalogu Qiskit Functions Catalog poskytuje uživatelům Premium Plan přístup k prozkoumání dostupných funkcí, včetně těch napsaných společností IBM a těch napsaných dalšími členy našeho ekosystému. Katalog obsahuje dva druhy funkcí: circuit functions a application functions.</p>
 <ul>
 <li class="">
 <p><strong>Circuit functions</strong> poskytují zjednodušené rozhraní pro spouštění Circuits. Přijímají abstraktní Circuits a observably poskytnuté uživatelem jako vstup, a poté spravují syntézu, optimalizaci a spuštění odpovídajícího ISA Circuit. Circuit functions spojují nejnovější možnosti transpilace, potlačování chyb a zmírňování chyb, aby byl výkon na úrovni užitečnosti dostupný ihned po spuštění. To umožňuje výpočetním vědcům soustředit se na mapování jejich problémů na Circuits, místo aby pro každý problém budovali vzor od základů.</p>

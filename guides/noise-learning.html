@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.7a646d4c.js" defer="defer"></script>
-<script src="/assets/js/main.02d467d9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.eb9c5792.js" defer="defer"></script>
+<script src="/assets/js/main.d6a98d7e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -63,8 +63,8 @@ Následující kód ukazuje, jak použít tento pomocný program.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="noiselearnerv3-noise-learning-options">Možnosti učení šumu<a href="#noiselearnerv3-noise-learning-options" class="hash-link" aria-label="Přímý odkaz na Možnosti učení šumu" title="Přímý odkaz na Možnosti učení šumu" translate="no">​</a></h3>
 <p><code>NoiseLearnerV3</code> podporuje několik možností, včetně počtu randomizací a hloubky párů vrstev, mimo jiné. Podobně jako u primitivů můžeš možnosti specifikovat během vytváření instance objektu <code>NoiseLearnerV3</code> nebo po něm. Předchozí příklad kódu ukázal, jak nastavit možnosti <code>shots_per_randomization</code> a <code>num_randomizations</code>. Podrobnější informace najdeš v dokumentaci API pro <a href="https://qiskit.github.io/qiskit-ibm-runtime/stubs/qiskit_ibm_runtime.options.NoiseLearnerV3Options.html#qiskit_ibm_runtime.options.NoiseLearnerV3Options" target="_blank" rel="noopener noreferrer" class=""><code>NoiseLearnerV3Options</code></a>.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="input-a-noise-model-to-executor">Předání modelu šumu jako vstup do Executor<a href="#input-a-noise-model-to-executor" class="hash-link" aria-label="Přímý odkaz na Předání modelu šumu jako vstup do Executor" title="Přímý odkaz na Předání modelu šumu jako vstup do Executor" translate="no">​</a></h3>
-<p>Executor se řídí záměry návrhu specifikovanými v anotacích obvodů (ve formě simplexu) a možnostech. <code>InjectNoise</code> je anotace pro specifikaci místa injektování šumu a argument simplexu <code>pauli_lindblad_maps</code> specifikuje, který model šumu použít.</p>
-<p>Obvod z předchozího příkladu prochází boxing pass managerem, který skupuje instrukce do anotovaných boxů. Příslušný kód je zde přidán pro lepší pochopení.</p>
+<p>Executor se řídí záměry návrhu specifikovanými v anotacích obvodů (ve formě samplexu) a možnostech. <code>InjectNoise</code> je anotace pro specifikaci místa injektování šumu a argument samplexu <code>pauli_lindblad_maps</code> specifikuje, který model šumu použít.</p>
+<p>Obvod z předchozího příkladu prochází boxing pass managerem, který seskupuje instrukce do anotovaných boxů. Příslušný kód je zde přidán pro lepší pochopení.</p>
 <ul>
 <li class=""><code>inject_noise_targets=&quot;gates&quot;</code> specifikuje přidání anotací <code>InjectNoise</code> do boxů obsahujících provazovací operace.</li>
 <li class=""><code>inject_noise_strategy=&quot;uniform_modification&quot;</code> specifikuje přiřazení stejného <code>ref</code> a <code>modifier_ref</code> všem ekvivalentním boxům s anotacemi <code>InjectNoise</code>.<!-- -->
