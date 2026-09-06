@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0a49a2ec.js" defer="defer"></script>
-<script src="/assets/js/main.aa9ebf42.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4be720a9.js" defer="defer"></script>
+<script src="/assets/js/main.23a454a4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/calibration-jobs" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,51 +28,81 @@
 <p>Aby byl zajištěn konzistentní výkon, jsou kvantové počítače IBM® pravidelně monitorovány za účelem sledování parametrů, které mohou v čase kolísat, v případě potřeby jsou spouštěny kalibrace a každodenně probíhá benchmarking. Tato stránka popisuje tři procesy — monitorování, kalibraci a benchmarking —, které společně zajišťují, že flotila kvantových počítačů IBM zůstává co nejstabilnější, nejpředvídatelnější a co nejvíce dostupná pro uživatele.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring">Monitorování<a href="#monitoring" class="hash-link" aria-label="Přímý odkaz na Monitorování" title="Přímý odkaz na Monitorování" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="parameter-monitoring">Monitorování parametrů<a href="#parameter-monitoring" class="hash-link" aria-label="Přímý odkaz na Monitorování parametrů" title="Přímý odkaz na Monitorování parametrů" translate="no">​</a></h3>
-<p>Stručné úlohy monitorování parametrů jsou prováděny přibližně jednou za hodinu, automaticky prokládány mezi uživatelskými úlohami, a to prostřednictvím kompletního softwarového zásobníku Qiskit Runtime. Výsledky těchto úloh jsou analyzovány, aby bylo zjištěno, zda některé parametry nezačaly vybočovat z přijatelných rozsahů — ideálně se zachytí problémy dříve, než dosáhnou takové míry, která by měla znatelný dopad na výkon.</p>
+<p>Stručné úlohy monitorování parametrů jsou prováděny přibližně jednou za hodinu, automaticky prokládány mezi uživatelskými úlohami, a to prostřednictvím kompletního softwarového zásobníku IBM Quantum Compute Service. Výsledky těchto úloh jsou analyzovány, aby bylo zjištěno, zda některé parametry nezačaly vybočovat z přijatelných rozsahů — ideálně se zachytí problémy dříve, než dosáhnou takové míry, která by měla znatelný dopad na výkon.</p>
 <p>Mezi monitorované parametry patří mimo jiné:</p>
 <ul>
-<li class="">Úhly čtení, amplitudy a práh diskriminátoru, zajišťující přesnou diskriminaci stavů, nízký únik a stabilní provoz. Zahrnuje to provozní parametry našich kvantově omezených zesilovačů.</li>
-<li class="">Operace jedno- a dvoučásticových Gate, potvrzující jejich správné chování s cílem udržet správné úhly rotace a minimalizovat fázové a amplitudové chyby.</li>
-<li class="">Projevy aktivity TLS.</li>
+<li class="">
+<p>Úhly čtení, amplitudy a práh diskriminátoru, zajišťující přesnou diskriminaci stavů, nízký únik a stabilní provoz. Zahrnuje to provozní parametry našich kvantově omezených zesilovačů.</p>
+</li>
+<li class="">
+<p>Operace jedno- a dvoučásticových Gate, potvrzující jejich správné chování s cílem udržet správné úhly rotace a minimalizovat fázové a amplitudové chyby.</p>
+</li>
+<li class="">
+<p>Projevy aktivity TLS.</p>
+</li>
 </ul>
 <p>Pokud výsledky těchto monitorovacích úloh naznačují mírné odchylky od očekávaného výkonu, jsou spuštěny příslušné kalibrační úlohy. Pokud je detekována závažná aktivita TLS, může být strategie kalibrace pro Gate přidružené k postiženým qubitům automaticky upravena (a může zahrnovat pozastavení kalibrací), dokud se aktivita TLS nesníží na přijatelnou úroveň.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="holistic-monitoring">Holistické monitorování<a href="#holistic-monitoring" class="hash-link" aria-label="Přímý odkaz na Holistické monitorování" title="Přímý odkaz na Holistické monitorování" translate="no">​</a></h3>
-<p>Kromě úloh monitorujících jednotlivé parametry existují úlohy, které sledují výkon kvantového počítače holističtěji — například testy zaměřené na věrnost generovaných Bellových stavů, jakož i testy zlomkových Gate a dynamických Circuit na kvantových počítačích, které tyto funkce podporují. Cílem těchto testů, které rovněž probíhají přes kompletní zásobník Qiskit Runtime prokládaně s uživatelskými úlohami, je efektivně ověřovat celkové chování hardwaru a softwaru. Pokud tyto testy detekují výrazný pokles výkonu, kvantový počítač automaticky pozastaví frontu úloh, dokud nebude problém vyřešen — tím je zajištěno, že uživatelské úlohy nebudou spuštěny, dokud zařízení nepracuje dle očekávání.</p>
+<p>Kromě úloh monitorujících jednotlivé parametry existují úlohy, které sledují výkon kvantového počítače holističtěji — například testy zaměřené na věrnost generovaných Bellových stavů, jakož i testy zlomkových Gate a dynamických Circuit na kvantových počítačích, které tyto funkce podporují. Cílem těchto testů, které rovněž probíhají přes kompletní zásobník Quantum Compute prokládaně s uživatelskými úlohami, je efektivně ověřovat celkové chování hardwaru a softwaru. Pokud tyto testy detekují výrazný pokles výkonu, kvantový počítač automaticky pozastaví frontu úloh, dokud nebude problém vyřešen — tím je zajištěno, že uživatelské úlohy nebudou spuštěny, dokud zařízení nepracuje dle očekávání.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="calibrating">Kalibrace<a href="#calibrating" class="hash-link" aria-label="Přímý odkaz na Kalibrace" title="Přímý odkaz na Kalibrace" translate="no">​</a></h2>
 <p>Kalibrace jsou spouštěny vždy, když monitorovací úlohy indikují, že parametry jako amplitudy nebo úhly pulzů se odchýlily od svých ideálních hodnot. Probíhají průběžně během dne mezi uživatelskými úlohami, takže neexistuje žádný pevně stanovený čas, kdy kalibrace začínají a končí. Spouštějí se pouze pro qubity a Gate, u nichž monitorování parametrů identifikovalo konkrétní problémy, spolu se všemi qubity, které musí běžet současně dle specifických pravidel dávkování. Na QPU Heron celkový čas strávený kalibracemi typicky nepřesahuje dvě hodiny denně.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-operations">Jednočásticové operace<a href="#single-qubit-operations" class="hash-link" aria-label="Přímý odkaz na Jednočásticové operace" title="Přímý odkaz na Jednočásticové operace" translate="no">​</a></h3>
 <p>Tyto kalibrace zajišťují přesnou implementaci jednočásticových Gate: sx, x, rx (zlomkové). Upravujeme:</p>
 <ul>
-<li class="">Frekvence qubitů</li>
-<li class="">Amplitudy a fáze pulzů</li>
+<li class="">
+<p>Frekvence qubitů</p>
+</li>
+<li class="">
+<p>Amplitudy a fáze pulzů</p>
+</li>
 </ul>
 <p>Tyto kalibrace jsou dávkovány napříč postiženými qubity a tam, kde je to vhodné, prováděny souběžně, přičemž strategie dávkování jsou přizpůsobeny každému typu kalibrace.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-operations">Dvoučásticové operace<a href="#two-qubit-operations" class="hash-link" aria-label="Přímý odkaz na Dvoučásticové operace" title="Přímý odkaz na Dvoučásticové operace" translate="no">​</a></h3>
 <ul>
-<li class="">Amplitudy a fáze Gate CZ a RZZ (pro procesory Heron a Nighthawk)</li>
-<li class="">Amplitudy a fáze Gate ECR (pro procesory Eagle)</li>
+<li class="">
+<p>Amplitudy a fáze Gate CZ a RZZ (pro procesory Heron a Nighthawk)</p>
+</li>
+<li class="">
+<p>Amplitudy a fáze Gate ECR (pro procesory Eagle)</p>
+</li>
 </ul>
 <p>Tyto kalibrace jsou prováděny v dávkách qubitů, které nejsou vzájemně nejbližšími sousedy, s cílem minimalizovat přeslechy.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readout">Čtení<a href="#readout" class="hash-link" aria-label="Přímý odkaz na Čtení" title="Přímý odkaz na Čtení" translate="no">​</a></h3>
 <ul>
-<li class="">Úhly čtecích pulzů</li>
-<li class="">Parametry diskriminace měření</li>
+<li class="">
+<p>Úhly čtecích pulzů</p>
+</li>
+<li class="">
+<p>Parametry diskriminace měření</p>
+</li>
 </ul>
 <p>Tyto kalibrace jsou prováděny současně na qubitech, které kalibraci vyžadují.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-calibrations-are-scheduled">Plánování kalibrací<a href="#how-calibrations-are-scheduled" class="hash-link" aria-label="Přímý odkaz na Plánování kalibrací" title="Přímý odkaz na Plánování kalibrací" translate="no">​</a></h3>
 <ul>
-<li class="">Kalibrační úloha nemůže běžet současně s úlohou nebo Session.</li>
-<li class="">Během dlouhých Session proto může kvantový počítač vykazovat sníženou efektivní stabilitu v důsledku opožděné nebo méně časté rekalibrace.</li>
-<li class="">Dvě úlohy odeslané ve stejný čas mohou být spuštěny pod různými sadami kalibrací v závislosti na načasování.</li>
+<li class="">
+<p>Kalibrační úloha nemůže běžet současně s úlohou nebo Session.</p>
+</li>
+<li class="">
+<p>Během dlouhých Session proto může kvantový počítač vykazovat sníženou efektivní stabilitu v důsledku opožděné nebo méně časté rekalibrace.</p>
+</li>
+<li class="">
+<p>Dvě úlohy odeslané ve stejný čas mohou být spuštěny pod různými sadami kalibrací v závislosti na načasování.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking">Benchmarking<a href="#benchmarking" class="hash-link" aria-label="Přímý odkaz na Benchmarking" title="Přímý odkaz na Benchmarking" translate="no">​</a></h2>
 <p>Každodenní benchmarking poskytuje komplexní přehled o výkonu kvantového počítače a generuje metriky zasílané uživatelům prostřednictvím Qiskit. Pomáhají uživatelům vybírat qubity, optimalizovat kompilace a lépe předvídat očekávaný výkon Circuit. Reportované hodnoty si můžeš prohlédnout buď programově, nebo na stránce <a href="https://quantum.cloud.ibm.com/computers" target="_blank" rel="noopener noreferrer" class="">Compute resources</a> (kliknutím na libovolný QPU otevřeš jeho kartu s podrobnými informacemi). Více podrobností o jednotlivých metrikách najdeš v <a class="" href="/guides/qpu-information">dokumentaci</a>.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Drift zařízení</div><div class="admonitionContent_BuS1"><p>Dopad driftu zařízení (degradace výkonu hardwaru v průběhu času) závisí na mnoha faktorech, například na tom, kdy naposledy proběhly kalibrace, na konkrétním prováděném experimentu, na aktivitě TLS a dalších. Pokud je konkrétní pracovní zátěž velmi citlivá na chybové hodnoty parametrů zařízení, můžeš provést benchmarking parametrů zařízení v reálném čase podle <a class="" href="/tutorials/real-time-benchmarking-for-qubit-selection">tohoto tutoriálu</a> na IBM Quantum Learning.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-performance">Výkon jednočásticových operací<a href="#single-qubit-performance" class="hash-link" aria-label="Přímý odkaz na Výkon jednočásticových operací" title="Přímý odkaz na Výkon jednočásticových operací" translate="no">​</a></h3>
 <ul>
-<li class=""><a class="" href="/guides/qpu-information#median-sx-error">Randomizovaný benchmarking</a> (RB) v dávkových skupinách</li>
-<li class="">Koherenční časy <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> a <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></li>
-<li class=""><a class="" href="/guides/qpu-information#median-readout-error">Metriky věrnosti měření</a></li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-sx-error">Randomizovaný benchmarking</a> (RB) v dávkových skupinách</p>
+</li>
+<li class="">
+<p>Koherenční časy <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> a <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></p>
+</li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-readout-error">Metriky věrnosti měření</a></p>
+</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-performance">Výkon dvoučásticových operací<a href="#two-qubit-performance" class="hash-link" aria-label="Přímý odkaz na Výkon dvoučásticových operací" title="Přímý odkaz na Výkon dvoučásticových operací" translate="no">​</a></h3>
 <ul>

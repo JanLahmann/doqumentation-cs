@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0a49a2ec.js" defer="defer"></script>
-<script src="/assets/js/main.aa9ebf42.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4be720a9.js" defer="defer"></script>
+<script src="/assets/js/main.23a454a4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qrmi" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -35,35 +35,65 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">AlmaLinux 9, Amazon Linux 2023, CentOS Stream 9, CentOS Stream 10, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 8, RedHat Enterprise Linux 9, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 10, Rocky Linux 8, Rocky Linux 9, SuSE 15, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Ubuntu 22.04, Ubuntu 24.04, MacOS Sequoia 15.1 or above</span><br></div></code></pre></div></div>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="compiling-environment">Prostředí pro kompilaci<a href="#compiling-environment" class="hash-link" aria-label="Přímý odkaz na Prostředí pro kompilaci" title="Přímý odkaz na Prostředí pro kompilaci" translate="no">​</a></h4>
 <ul>
-<li class=""><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Kompilátor Rust</a> 1.91 nebo novější</li>
-<li class="">Kompilátor C: například GCC (<code>gcc</code>) pro Linux a Clang (<code>clang-tools-extra</code>) pro neznámé cíle Rustu / křížové kompilace. QRMI je kompatibilní s kompilátorem odpovídajícím standardu C11</li>
-<li class=""><code>make/cmake</code> (RPM balíček make/cmake pro OS kompatibilní s RHEL)</li>
-<li class=""><code>openssl</code> (RPM balíček openssl-devel pro OS kompatibilní s RHEL)</li>
-<li class=""><code>zlib</code> (RPM balíček zlib-devel pro OS kompatibilní s RHEL)</li>
-<li class="">Python 3.11, 3.12 nebo 3.13 (pro Python API)<!-- -->
+<li class="">
+<p><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Kompilátor Rust</a> 1.91 nebo novější</p>
+</li>
+<li class="">
+<p>Kompilátor C: například GCC (<code>gcc</code>) pro Linux a Clang (<code>clang-tools-extra</code>) pro neznámé cíle Rustu / křížové kompilace. QRMI je kompatibilní s kompilátorem odpovídajícím standardu C11</p>
+</li>
+<li class="">
+<p><code>make/cmake</code> (RPM balíček make/cmake pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p><code>openssl</code> (RPM balíček openssl-devel pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p><code>zlib</code> (RPM balíček zlib-devel pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 nebo 3.13 (pro Python API)</p>
 <ul>
-<li class="">Knihovny a hlavičkové soubory potřebné pro vývoj v Pythonu (RPM balíček python3.1x-devel pro OS kompatibilní s RHEL):<!-- -->
+<li class="">
+<p>Knihovny a hlavičkové soubory potřebné pro vývoj v Pythonu (RPM balíček python3.1x-devel pro OS kompatibilní s RHEL):</p>
 <ul>
-<li class="">/usr/include/python3.1x</li>
-<li class="">/usr/lib64/libpython3.1x.so</li>
-</ul>
+<li class="">
+<p>/usr/include/python3.1x</p>
+</li>
+<li class="">
+<p>/usr/lib64/libpython3.1x.so</p>
 </li>
 </ul>
 </li>
-<li class="">Doxygen (pro generování dokumentace C API), v závislosti na OS:<!-- -->
+</ul>
+</li>
+<li class="">
+<p>Doxygen (pro generování dokumentace C API), v závislosti na OS:</p>
 <ul>
-<li class=""><code>dnf install doxygen</code> pro Linux (RHEL/CentOS/Rocky Linux a další)</li>
-<li class=""><code>apt install doxygen</code> pro Linux (Ubuntu a další)</li>
-<li class=""><code>brew install doxygen</code>pro MacOS</li>
+<li class="">
+<p><code>dnf install doxygen</code> for Linux (RHEL/CentOS/Rocky Linux and others)</p>
+</li>
+<li class="">
+<p><code>apt install doxygen</code> for Linux (Ubuntu and others)</p>
+</li>
+<li class="">
+<p><code>brew install doxygen</code>for MacOS</p>
+</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="runtime-environment">Prostředí pro spuštění<a href="#runtime-environment" class="hash-link" aria-label="Přímý odkaz na Prostředí pro spuštění" title="Přímý odkaz na Prostředí pro spuštění" translate="no">​</a></h4>
 <ul>
-<li class="">gcc (RPM balíček libgcc pro OS kompatibilní s RHEL)</li>
-<li class="">openssl (RPM balíček openssl-libs pro OS kompatibilní s RHEL)</li>
-<li class="">zlib (RPM balíček zlib pro OS kompatibilní s RHEL)</li>
-<li class="">Python 3.11, 3.12 nebo 3.13 (pro Python API)<!-- -->
+<li class="">
+<p>gcc (RPM balíček libgcc pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p>openssl (RPM balíček openssl-libs pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p>zlib (RPM balíček zlib pro OS kompatibilní s RHEL)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 nebo 3.13 (pro Python API)</p>
 <ul>
 <li class="">Knihovny a hlavičkové soubory potřebné pro vývoj v Pythonu (RPM balíček python3.1x-devel pro OS kompatibilní s RHEL)</li>
 </ul>

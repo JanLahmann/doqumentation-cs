@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0a49a2ec.js" defer="defer"></script>
-<script src="/assets/js/main.aa9ebf42.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4be720a9.js" defer="defer"></script>
+<script src="/assets/js/main.23a454a4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -31,15 +31,15 @@ záplatové verze. Například v čísle verze <code>X.Y.Z</code> je <code>X</co
 <p>Zpětně nekompatibilní změny API jsou vyhrazeny pro vydání hlavních verzí. <strong>Minimální</strong>
 doba mezi vydáními hlavních verzí je jeden rok. Vedlejší verze přinášejí
 nové funkce a opravy chyb bez narušení kompatibility API a jsou
-pravidelně (v současnosti každé tři měsíce) vydávány <strong>pouze</strong> pro
+pravidelně (v současnosti přibližně každé tři měsíce) vydávány <strong>pouze</strong> pro
 aktuální hlavní verzi. Záplatové verze poskytují opravy chyb identifikovaných v
 nejnovější vedlejší verzi každé aktivně podporované série vydání (tedy
 hlavní verze). Podporujeme nejvýše dvě série vydání najednou, což nastává
 pouze během období překryvu po vydání nové hlavní verze,
 podrobněji popsaného níže.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">Harmonogram vydání<a href="#release-schedule" class="hash-link" aria-label="Přímý odkaz na Harmonogram vydání" title="Přímý odkaz na Harmonogram vydání" translate="no">​</a></h2>
-<p>Orientační harmonogram vydání je uveden níže:</p>
-<p><img decoding="async" loading="lazy" alt="Orientační harmonogram vydání Qiskitu" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
+<p>Příklad cyklu hlavního vydání X:</p>
+<p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
 <p>Aktuální harmonogram vydání najdeš v seznamu <a href="https://github.com/Qiskit/qiskit/milestones" target="_blank" rel="noopener noreferrer" class="">milníků</a> projektu Qiskit na GitHubu, který vždy obsahuje aktuální plán vydání.</p>
 <p>S vydáním nové hlavní verze je předchozí hlavní verze podporována
 po dobu nejméně šesti měsíců pouze s opravami chyb a jeden rok s opravami zabezpečení. Během
@@ -83,10 +83,10 @@ Krátce před vydáním nové hlavní verze bude
 vydána finální vedlejší verze. Toto finální vydání vedlejší verze <code>X.Y+1.0.0</code> je ekvivalentní
 <code>X.Y.0</code>, ale obsahuje varování a upozornění na zastaralost pro jakékoli změny API, které jsou
 provedeny v nové sérii hlavních verzí.</p>
-<p>Například těsně před vydáním 1.0.0 bude vydána verze 0.46.0.
-Vydání 0.46.0 bude ekvivalentní vydání 0.45.0, ale s
+<p>Například těsně po vydání 1.0.0 je vydána verze 0.46.0.
+Vydání 0.46.0 je ekvivalentní vydání 0.45.0, ale s
 dalšími varováními o zastaralosti, která dokumentují změny API provedené jako
-součást vydání 1.0.0. Tento vzor bude použit pro všechna budoucí vydání hlavních
+součást vydání 1.0.0. Tento vzor se vztahuje na všechna vydání hlavních
 verzí.</p>
 <p>Uživatelé Qiskitu by nejprve měli přejít na tuto finální vedlejší verzi,
 aby viděli všechna varování o zastaralosti a upravili své používání Qiskitu
@@ -115,8 +115,8 @@ budou mít finalizovaný povrch API a slouží k testování připravovaného vy
 <p>Poznámka: když je vydán jeden z předpon předvydání dle PEP440 (jako <code>a</code>, <code>b</code> nebo <code>pre</code>),
 nemá stejné záruky jako vydání <code>rc</code> a jde
 pouze o náhledové vydání. API se může mezi těmito předvydáními
-a finálním vydáním s daným číslem verze změnit. Například <code>1.0.0pre1</code> může mít
-jiné finální API než <code>1.0.0</code>.</p>
+a finálním vydáním s daným číslem verze změnit. Například <code>X.0.0pre1</code> může mít
+jiné API než konečné <code>X.0.0</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-releases">Vydání po vydání<a href="#post-releases" class="hash-link" aria-label="Přímý odkaz na Vydání po vydání" title="Přímý odkaz na Vydání po vydání" translate="no">​</a></h2>
 <p>Pokud se vyskytnou problémy s balením vydání, může být
 vydáno vydání po vydání (post-release) k jejich nápravě. Tato budou mít tvar <code>X.Y.Z.1</code>, kde čtvrté

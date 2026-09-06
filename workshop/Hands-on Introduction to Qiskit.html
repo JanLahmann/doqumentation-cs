@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0a49a2ec.js" defer="defer"></script>
-<script src="/assets/js/main.aa9ebf42.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4be720a9.js" defer="defer"></script>
+<script src="/assets/js/main.23a454a4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -36,12 +36,24 @@
 <p>Aby ses mohl/a spouštět kvantové obvody na hardwaru, musíš si nejprve nastavit účet.
 Postup je následující:</p>
 <ol>
-<li class="">Přejdi na <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">vylepšenou IBM Quantum® Platform</a>.</li>
-<li class="">Přejdi do pravého horního rohu (jak je zobrazeno na obrázku výše), vytvoř svůj API token a zkopíruj ho na bezpečné místo.</li>
-<li class="">V další buňce nahraď <code>deleteThisAndPasteYourAPIKeyHere</code> svým API klíčem.</li>
-<li class="">Přejdi do levého dolního rohu (jak je zobrazeno na obrázku výše) a <strong>vytvoř svou instanci</strong>. Ujisti se, že zvolíš otevřený plán.</li>
-<li class="">Po vytvoření instance zkopíruj přiřazený CRN kód. Možná bude nutné stránku obnovit, aby se instance zobrazila.</li>
-<li class="">V buňce níže nahraď <code>deleteThisAndPasteYourCRNHere</code> svým CRN kódem.</li>
+<li class="">
+<p>Přejdi na <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">vylepšenou IBM Quantum® Platform</a>.</p>
+</li>
+<li class="">
+<p>Přejdi do pravého horního rohu (jak je zobrazeno na obrázku výše), vytvoř svůj API token a zkopíruj ho na bezpečné místo.</p>
+</li>
+<li class="">
+<p>V další buňce nahraď <code>deleteThisAndPasteYourAPIKeyHere</code> svým API klíčem.</p>
+</li>
+<li class="">
+<p>Přejdi do levého dolního rohu (jak je zobrazeno na obrázku výše) a <strong>vytvoř svou instanci</strong>. Ujisti se, že zvolíš otevřený plán.</p>
+</li>
+<li class="">
+<p>Po vytvoření instance zkopíruj přiřazený CRN kód. Možná bude nutné stránku obnovit, aby se instance zobrazila.</p>
+</li>
+<li class="">
+<p>V buňce níže nahraď <code>deleteThisAndPasteYourCRNHere</code> svým CRN kódem.</p>
+</li>
 </ol>
 <p>Více podrobností o nastavení účtu IBM Cloud® najdeš v <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup" target="_blank" rel="noopener noreferrer" class="">tomto průvodci</a>.</p>
 <div class="alert alert-block alert-warning"><p>⚠️ <strong>Poznámka:</strong> Zacházej se svým API klíčem jako s bezpečným heslem. Více informací o používání API klíče v bezpečných i nedůvěryhodných prostředích najdeš v průvodci <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup#cloud-save" target="_blank" rel="noopener noreferrer" class="">Nastavení cloudu</a>.</p></div>
@@ -399,11 +411,21 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 </ul>
 <p>A jak to funguje? Postup je následující:</p>
 <ol>
-<li class=""><strong>Připrav Alicin stav <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> na <code>q</code>.</strong> Pro ověření vytvoříme konkrétní stav, například <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span>.</li>
-<li class=""><strong>Vytvoř provázání:</strong> Vygeneruj Bellův pár mezi <code>a</code> a <code>b</code>.</li>
-<li class=""><strong>Aliciny operace:</strong> Alice provede „Bellovo měření&quot; na svých dvou qubitech (<code>q</code> a <code>a</code>) a uloží klasické výsledky do <code>c0</code> a <code>c1</code>.</li>
-<li class=""><strong>Klasická komunikace:</strong> Alice pošle Bobovi své dva klasické bity (<code>c0</code>, <code>c1</code>).</li>
-<li class=""><strong>Bobovy opravy:</strong> Bob aplikuje na svůj qubit (<code>b</code>) specifické kvantové Gate (X a/nebo Z) podmíněně hodnotami <code>c0</code> a <code>c1</code>, které obdržel.</li>
+<li class="">
+<p><strong>Připrav Alicin stav <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> na <code>q</code>.</strong> Pro ověření vytvoříme konkrétní stav, například <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span>.</p>
+</li>
+<li class="">
+<p><strong>Vytvoř provázání:</strong> Vygeneruj Bellův pár mezi <code>a</code> a <code>b</code>.</p>
+</li>
+<li class="">
+<p><strong>Aliciny operace:</strong> Alice provede „Bellovo měření&quot; na svých dvou qubitech (<code>q</code> a <code>a</code>) a uloží klasické výsledky do <code>c0</code> a <code>c1</code>.</p>
+</li>
+<li class="">
+<p><strong>Klasická komunikace:</strong> Alice pošle Bobovi své dva klasické bity (<code>c0</code>, <code>c1</code>).</p>
+</li>
+<li class="">
+<p><strong>Bobovy opravy:</strong> Bob aplikuje na svůj qubit (<code>b</code>) specifické kvantové Gate (X a/nebo Z) podmíněně hodnotami <code>c0</code> a <code>c1</code>, které obdržel.</p>
+</li>
 </ol>
 <p>Pokud je vše provedeno správně, Bobův qubit <code>b</code> skončí ve stavu <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> — původním stavu Alicina <code>q</code>!</p>
 <p>Pro podrobnější vysvětlení a průzkum kvantové teleportace, včetně matematického zdůvodnění, proč tento protokol funguje, se můžeš podívat na výukové zdroje IBM Quantum: <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information/entanglement-in-action/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a>. Toto je součástí kurzu <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information" target="_blank" rel="noopener noreferrer" class="">Basics of Quantum Information</a>.</p>

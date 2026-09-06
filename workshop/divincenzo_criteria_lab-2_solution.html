@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.0a49a2ec.js" defer="defer"></script>
-<script src="/assets/js/main.aa9ebf42.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4be720a9.js" defer="defer"></script>
+<script src="/assets/js/main.23a454a4.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Fyzik David DiVincenzo nastínil pět klíčových požadavků pro jakoukoli fyzickou implementaci kvantového počítače, plus dvě další kritéria pro kvantovou komunikaci. V tomto notebooku <strong>si každé DiVincenzovo kritérium prakticky vyzkoušíme prostřednictvím ukázek v Qiskitu</strong>. Místo hlubokého ponoru do teorie každá sekce stručně vysvětlí jedno kritérium a pak nabídne cvičení s kódem v Qiskitu 2. Budete spouštět Circuit na simulátorech a reálných zařízeních IBM Quantum, abyste <strong>každý princip prozkoumali přímo v praxi</strong>.</p>
 <p><strong>DiVincenzových pět kritérií pro kvantové výpočty</strong>:</p>
 <ol>
-<li class=""><strong>Škálovatelný fyzický systém s dobře popsanými qubit.</strong></li>
-<li class=""><strong>Schopnost inicializovat qubit</strong> do jednoduchého referenčního stavu (např. |00…0〉).</li>
-<li class=""><strong>Dlouhé časy dekoherence</strong> (koherence qubit musí být mnohem delší než doba provedení Gate).</li>
-<li class=""><strong>Univerzální sada kvantových Gate</strong> (schopnost provádět libovolné unitární operace).</li>
-<li class=""><strong>Schopnost měřit jednotlivé qubit</strong> (číst stav každého qubit).</li>
+<li class="">
+<p><strong>Škálovatelný fyzický systém s dobře popsanými qubit.</strong></p>
+</li>
+<li class="">
+<p><strong>Schopnost inicializovat qubit</strong> do jednoduchého referenčního stavu (např. |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Dlouhé časy dekoherence</strong> (koherence qubit musí být mnohem delší než doba provedení Gate).</p>
+</li>
+<li class="">
+<p><strong>Univerzální sada kvantových Gate</strong> (schopnost provádět libovolné unitární operace).</p>
+</li>
+<li class="">
+<p><strong>Schopnost měřit jednotlivé qubit</strong> (číst stav každého qubit).</p>
+</li>
 </ol>
 <p><em>(DiVincenzo také popsal dvě kritéria pro kvantovou komunikaci: schopnost vzájemně převádět stacionární a „létající&quot; Qubit a věrně přenášet létající qubit mezi lokalitami. Tato kritéria zahrnujeme v doporučené aktivitě na konci tohoto notebooku.)</em></p>
 <p>Každá z následujících sekcí odpovídá jednomu kritériu. K ilustraci konceptu použijeme Qiskit s kódem a <strong>interaktivními experimenty</strong>, které si můžeš sám vyzkoušet. Uvidíme například, jak zvyšování počtu qubit a hloubky Circuit ovlivňuje výsledky (Kritérium 1), jak resetovat a připravovat stavy qubit (Kritérium 2), jak měřit qubit na simulátorech vs reálných zařízeních (Kritérium 4), jak Qiskit skládá univerzální Gate (Kritérium 3) a jak konečná koherence (T₁, T₂) ovlivňuje výpočty (Kritérium 5). Na konci budeš mít hlubší intuici pro to, co každé DiVincenzovo kritérium v praxi znamená a jak Qiskit umožňuje experimentovat s nimi.</p>
@@ -140,22 +150,36 @@ Měl bys pozorovat, že pravděpodobnost <code>P(qubit=1)</code> klesá s rostou
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Kritéria kvantové komunikace (létající qubity)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Přímý odkaz na Kritéria kvantové komunikace (létající qubity)" title="Přímý odkaz na Kritéria kvantové komunikace (létající qubity)" translate="no">​</a></h2>
 <p>DiVincenzo také uvedl dvě kritéria specifická pro kvantovou komunikaci, důležitá pro budování síťového kvantového počítače:</p>
 <ol start="6">
-<li class=""><strong>Schopnost vzájemné konverze stacionárních a létajících qubitů.</strong> (Např. mapování qubitu v procesoru na foton, který může cestovat.)</li>
-<li class=""><strong>Schopnost věrného přenosu létajících qubitů mezi místy.</strong> (Např. odeslání fotonového qubitu přes optické vlákno bez ztráty kvantové informace.)</li>
+<li class="">
+<p><strong>Schopnost vzájemné konverze stacionárních a létajících qubitů.</strong> (Např. mapování qubitu v procesoru na foton, který může cestovat.)</p>
+</li>
+<li class="">
+<p><strong>Schopnost věrného přenosu létajících qubitů mezi místy.</strong> (Např. odeslání fotonového qubitu přes optické vlákno bez ztráty kvantové informace.)</p>
+</li>
 </ol>
 <p>Toto přesahuje standardní použití Qiskitu, protože Qiskit se primárně zabývá stacionárními qubity na čipu. Nicméně koncept těchto kritérií můžeme ilustrovat jednoduchým příkladem: <strong>kvantová teleportace</strong>. Teleportace ukazuje, jak převést stav stacionárního qubitu na informaci přenášenou provázaným párem (část „létající&quot;) a klasickou komunikaci, která pak slouží k rekonstrukci stavu na jiném stacionárním qubitu jinde.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Doporučená aktivita: Absolvuj modul <em>Kvantová teleportace</em> z Qiskit in Classrooms<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Přímý odkaz na recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Přímý odkaz na recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
 <p>Modul <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> z Qiskit in Classrooms od Dr. Katie McCormick tě provede jedním z nejpůsobivějších protokolů v kvantové informatice: kvantovou teleportací, při níž je kvantový stav (qubit) přenesen od Alice k Bobovi pomocí provázanosti a pouhých dvou klasických bitů. Naučíš se celý postup teleportace krok za krokem – jak připravit provázaný Bellův pár, provést měření v Bellově bázi na straně Alice, přenést klasické výsledky a aplikovat správnou kvantovou bránu na Bobův qubit, aby přesně obnovil původní stav. Cestou prozkoumáš, proč teleportace informace qubitu neporušuje teorém o neklonování ani nepřekračuje rychlost světla. Prostřednictvím praktických cvičení s hardwarem IBM Quantum nebo simulátory získáš praktické pochopení měření, provázanosti a řízeného feed-forward.</p>
-<p>Zvládnutím kvantové teleportace pochopíš, jak kódovat, přenášet a obnovovat kvantovou informaci mezi odlišnými uzly – čímž položíš základy pro kvantové sítě, systémy opakovačů, schémata bezpečné komunikace a škálovatelné modulární kvantové výpočty.</p>
-<p><strong>Jak to souvisí s kritérii 6 a 7:</strong> V reálné kvantové síti by byl sdílený provázaný pár vytvořen distribucí „létajících&quot; qubitů (jako fotonů) mezi místy Alice a Boba (Kritérium 7: věrný přenos). Samotný protokol teleportace pak slouží jako způsob mapování stavu stacionárního qubitu Alice na její polovinu provázaného páru, čímž ho efektivně „pošle&quot; Bobovi (Kritérium 6: vzájemná konverze). Qiskit nám umožňuje dokonale simulovat logiku protokolu a poskytuje tak konceptuální model toho, jak jsou tato kritéria naplněna v komunikačních architekturách.</p>
+<p>Zvládnutím kvantové teleportace pochopíš, jak kódovat, přenášet a obnovovat kvantovou informaci mezi oddělenými uzly—což položí základ pro kvantové sítě, opakovací systémy, bezpečné komunikační schémata a škálovatelné modulární kvantové počítání.
+<strong>Jak to souvisí s kritérii 6 &amp; 7:</strong> V reálné kvantové síti by sdílený zapletený pár byl vytvořen distribucí &quot;létajících&quot; qubitů (jako fotonů) mezi místy Alice a Boba (Kritérium 7: věrný přenos). Samotný teleportační protokol pak slouží jako způsob, jak namapovat stav Alicina stacionárního qubitu na její polovinu zapleteného páru a efektivně jej &#x27;poslat&#x27; Bobovi (Kritérium 6: interkonverze). Qiskit nám umožňuje logiku protokolu dokonale simulovat a poskytuje koncepční model toho, jak jsou tato kritéria splněna v komunikačních architekturách.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Závěr a shrnutí<a href="#conclusion-summary" class="hash-link" aria-label="Přímý odkaz na Závěr a shrnutí" title="Přímý odkaz na Závěr a shrnutí" translate="no">​</a></h2>
 <p>Navrhli jsme sérii cvičení zaměřených na kód, která ilustrují DiVincenzova kritéria pomocí Qiskitu. Prostřednictvím těchto praktických příkladů jsi prozkoumal/a, jak reálná platforma kvantového počítání splňuje každý požadavek:</p>
 <ul>
-<li class=""><strong>Škálovatelnost</strong>: sestavování obvodů na více qubitech a pochopení škálování šumu.</li>
-<li class=""><strong>Inicializace</strong>: použití resetů a přípravy stavů ke spolehlivému zahájení výpočtů ve známých stavech.</li>
-<li class=""><strong>Univerzální brány</strong>: transpilace složitých operací do základních bran stroje, čímž prokazujeme, že lze provést libovolný výpočet.</li>
-<li class=""><strong>Měření</strong>: čtení qubitů a práce s realistickými chybami čtení.</li>
-<li class=""><strong>Koherence</strong>: sledování dopadu konečných hodnot T₁ a T₂ na věrnost algoritmu a potřeba, aby operace byly rychlé ve srovnání s dekoherencí.</li>
+<li class="">
+<p><strong>Škálovatelnost</strong>: sestavování obvodů na více qubitech a pochopení škálování šumu.</p>
+</li>
+<li class="">
+<p><strong>Inicializace</strong>: použití resetů a přípravy stavů ke spolehlivému zahájení výpočtů ve známých stavech.</p>
+</li>
+<li class="">
+<p><strong>Univerzální brány</strong>: transpilace složitých operací do základních bran stroje, čímž prokazujeme, že lze provést libovolný výpočet.</p>
+</li>
+<li class="">
+<p><strong>Měření</strong>: čtení qubitů a práce s realistickými chybami čtení.</p>
+</li>
+<li class="">
+<p><strong>Koherence</strong>: sledování dopadu konečných hodnot T₁ a T₂ na věrnost algoritmu a potřeba, aby operace byly rychlé ve srovnání s dekoherencí.</p>
+</li>
 </ul>
 <p>Pro úplnost jsme se také dotkli aspektů kvantové komunikace prostřednictvím modulu <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> z Qiskit in Classrooms, který propojuje poslední dvě kritéria (létající qubity).</p>
 <p>Na závěr stojí za zmínku, jak tato kritéria vzájemně působí v reálném kvantovém počítači jako IBM. Zařízení jako <strong>ibmq_brisbane</strong> má 127 supravodivých qubitů (Kritérium 1), každý začíná ve stavu |0〉 (Kritérium 2), s kalibrovanou sadou bran a kompilátory pro univerzalitu (Kritérium 4), mikrovlnnými čtecími rezonátory pro každý qubit (Kritérium 5) a dobami koherence v řádu stovek mikrosekund oproti nanosekundovým operacím (Kritérium 3). Pro experimenty s kvantovými sítěmi zkoumají IBM a další společnosti mikrovlnně-optické transduktory pro létající qubity a provazování vzdálených qubitů (Kritéria 6 a 7); to jsou aktivní oblasti výzkumu.</p>
