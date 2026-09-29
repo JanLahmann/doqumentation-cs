@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.2ee724e7.js" defer="defer"></script>
-<script src="/assets/js/main.7fb0e8dd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.66cb0242.js" defer="defer"></script>
+<script src="/assets/js/main.92505e1b.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/local-testing-mode" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/local-testing-mode" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,7 +42,7 @@ Doporučujeme používat tyto nebo novější verze.</p><div class="language-tex
 <p><code>&quot;automatic&quot;</code>: Výchozí simulační metoda. Simulační metoda se vybírá automaticky na základě Circuit a modelu šumu.</p>
 </li>
 <li class="">
-<p><code>&quot;statevector&quot;</code>: Hustá simulace stavového vektoru, která může vzorkovat výsledky měření z <em>ideálních</em> Circuit s veškerými měřeními na konci Circuit. Pro simulace se šumem každý výstřel vzorkuje náhodně vybraný zašuměný Circuit z modelu šumu.</p>
+<p><code>&quot;statevector&quot;</code>: Hustá simulace stavového vektoru, která může vzorkovat výsledky měření z <em>ideálních</em> Circuit s veškerými měřeními na konci Circuit. Pro simulace se šumem se v každém shotu vzorkuje náhodně vybraný zašuměný Circuit z modelu šumu.</p>
 </li>
 <li class="">
 <p><code>&quot;density_matrix&quot;</code>: Simulace matice hustoty, která může vzorkovat výsledky měření ze <em>zašuměných</em> Circuit s veškerými měřeními na konci Circuit.</p>
@@ -51,10 +51,10 @@ Doporučujeme používat tyto nebo novější verze.</p><div class="language-tex
 <p><code>&quot;stabilizer&quot;</code>: Efektivní simulátor Cliffordova stabilizátorového stavu, který dokáže simulovat zašuměné Cliffordovy Circuit, pokud jsou všechny chyby v modelu šumu také Cliffordovy chyby.</p>
 </li>
 <li class="">
-<p><code>&quot;extended_stabilizer&quot;</code>: Přibližný simulátor pro Clifford + T Circuit založený na rozkladu stavu do stabilizátorového stavu s hodností. Počet členů roste s počtem non-Cliffordových (T) Gate.</p>
+<p><code>&quot;extended_stabilizer&quot;</code>: Přibližný simulátor pro Clifford + T Circuit založený na rozkladu stavu na kombinaci stabilizátorových stavů (s danou hodností rozkladu). Počet členů roste s počtem non-Cliffordových (T) Gate.</p>
 </li>
 <li class="">
-<p><code>&quot;matrix_product_state&quot;</code>: Tenzorově-síťový simulátor stavového vektoru, který pro reprezentaci stavu používá reprezentaci maticového součinového stavu (MPS). Lze to provádět s oříznutím nebo bez oříznutí dimenzí vazby MPS v závislosti na nastavení simulátoru. Výchozí chování je bez oříznutí.</p>
+<p><code>&quot;matrix_product_state&quot;</code>: Tenzorově-síťový simulátor stavového vektoru, který stav reprezentuje jako maticový součinový stav (MPS). Lze to provádět s oříznutím nebo bez oříznutí dimenzí vazby MPS v závislosti na nastavení simulátoru. Výchozí chování je bez oříznutí.</p>
 </li>
 <li class="">
 <p><code>&quot;unitary&quot;</code>: Hustá simulace unitární matice ideálního Circuit. Tato metoda simuluje unitární matici samotného Circuit, nikoli vývoj počátečního kvantového stavu. Tato metoda dokáže simulovat pouze Gate; nepodporuje měření, reset ani šum.</p>
