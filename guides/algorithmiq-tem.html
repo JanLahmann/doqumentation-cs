@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.3d4a0c27.js" defer="defer"></script>
-<script src="/assets/js/main.fe17b71d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4452bf05.js" defer="defer"></script>
+<script src="/assets/js/main.1b05ac46.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/algorithmiq-tem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,21 +42,21 @@ odborníky.</p>
 globálního kanálu šumu ovlivňujícího stav kvantového procesoru a následném
 aplikování tohoto zobrazení na informačně úplné výsledky měření získané
 z zašuměného stavu, čímž se získají nestranné odhadce pozorovatelných veličin.</p>
-<p>Jako výhodu TEM využívá informačně úplná měření pro přístup k rozsáhlé sadě
+<p>Výhodou TEM je, že využívá informačně úplná měření pro přístup k rozsáhlé sadě
 mitigovaných středních hodnot pozorovatelných veličin a dosahuje optimální
 vzorkovací režie na kvantovém hardware, jak je popsáno ve Filippov et
 al. (2023), <a href="https://arxiv.org/abs/2307.11740" target="_blank" rel="noopener noreferrer" class="">arXiv:2307.11740</a>, a Filippov
-et al. (2024), <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="noopener noreferrer" class="">arXiv:2403.13542</a>. Vzorkovací
-režie označuje počet dodatečných měření potřebných k provedení efektivní
+et al. (2024), <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="noopener noreferrer" class="">arXiv:2403.13542</a>. Režie
+měření označuje počet dodatečných měření potřebných k provedení efektivní
 chybové mitigace, což je klíčový faktor pro proveditelnost kvantových výpočtů.
 TEM má proto potenciál umožnit kvantovou výhodu ve složitých scénářích, jako jsou
 aplikace v oblasti kvantového chaosu, fyziky mnoha těles, Hubbardovy dynamiky
 a simulací chemie malých molekul.</p>
 <p>Hlavní vlastnosti a výhody TEM lze shrnout takto:</p>
 <ol>
-<li class=""><strong>Optimální vzorkovací režie</strong>: TEM je optimální vzhledem k
+<li class=""><strong>Optimální režie měření</strong>: TEM je optimální vzhledem k
 <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.210601" target="_blank" rel="noopener noreferrer" class="">teoretickým hranicím</a>,
-což znamená, že žádná metoda nemůže dosáhnout menší vzorkovací režie. Jinými
+což znamená, že žádná metoda nemůže dosáhnout menší režie měření. Jinými
 slovy, TEM vyžaduje minimální počet dodatečných měření pro provedení
 chybové mitigace. To zároveň znamená, že TEM používá minimální kvantový runtime.</li>
 <li class=""><strong>Nákladová efektivita</strong>: Protože TEM zpracovává mitigaci šumu výhradně ve
@@ -81,10 +81,10 @@ na klasickém počítači. Toto měření se používá k provedení metod tenzo
 a sestavení mapy inverze šumu. Funkce aplikuje zobrazení, které plně invertuje
 celý zašuměný Circuit pomocí tenzorových sítí reprezentujících zašuměné vrstvy.</p>
 <p><img decoding="async" loading="lazy" alt="Schéma TEM" src="/assets/images/tem_scheme-3b0ce8de48d658c8be50eca1107670ae.svg" title="Mitigovaný odhad pozorovatelné O pomocí post-processingu výsledků měření zašuměného kvantového procesoru. U a N označují ideální kvantovou operaci a přidružené zobrazení šumu, které může být obecně nelokální (rozšířeno na šedé boxy). D označuje tenzor operátorů duálních k efektům v IC měření. Modul mitigace šumu M je tenzorová síť efektivně kontrahovaná od středu. První iterace kontrakce je znázorněna tečkovanou fialovou čarou, druhá přerušovanou čarou a třetí plnou čarou." width="985" height="562" class="img_ev3q"></p>
-<p>Jakmile jsou Circuit odeslány do funkce, jsou transpilovaný a
+<p>Jakmile jsou Circuit odeslány do funkce, jsou transpilovány a
 optimalizovány tak, aby se minimalizoval počet vrstev s dvou-Qubitovými Gate
-(nejhlučnějšími Gate na kvantových zařízeních). Šum ovlivňující vrstvy je
-naučen prostřednictvím
+(nejvíce zašuměnými Gate na kvantových zařízeních). Šum ovlivňující vrstvy se
+učí prostřednictvím
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/noise-learner-noise-learner" target="_blank" rel="noopener noreferrer" class="">Qiskit Runtime</a>
 pomocí řídkého Pauli-Lindbladova modelu šumu, jak je popsáno v E. van den Berg, Z.
 Minev, A. Kandala, K. Temme, Nat. Phys. (2023).
