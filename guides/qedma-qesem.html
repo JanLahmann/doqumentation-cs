@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.992e2b45.js" defer="defer"></script>
-<script src="/assets/js/main.cede10da.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ff21308f.js" defer="defer"></script>
+<script src="/assets/js/main.a65e7a94.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qedma-qesem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qedma-qesem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -101,13 +101,13 @@ Pro kontrolu stavu pracovní zátěže Qiskit Function nebo získání výsledk�
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="qesem-heuristic-extrapolation-results">Výsledky heuristické extrapolace QESEM<a href="#qesem-heuristic-extrapolation-results" class="hash-link" aria-label="Přímý odkaz na Výsledky heuristické extrapolace QESEM" title="Přímý odkaz na Výsledky heuristické extrapolace QESEM" translate="no">​</a></h4>
 <p>Ve standardním běhu QESEM s jednou hodnotou <code>precision</code> typu float jsou ve výsledcích automaticky k dispozici i body škálování šumu použité pro heuristiku QESEM. Tyto body se vypočítávají bez dalších zdrojů QPU.</p>
-<p>Škála <code>1.0</code> představuje úroveň šumu fyzického zařízení s mitigací výčtu (REM), zatímco škála <code>2.0</code> je komplementární bod se zesíleným šumem, rovněž s REM. Tyto body se používají k výpočtu výsledku <code>qesem_heuristic</code>.</p>
+<p>Škála <code>1.0</code> představuje úroveň šumu fyzického zařízení s mitigací chyb čtení (REM), zatímco škála <code>2.0</code> je komplementární bod se zesíleným šumem, rovněž s REM. Tyto body se používají k výpočtu výsledku <code>qesem_heuristic</code>.</p>
 <ul>
 <li class="">
 <p><code>qesem_heuristic</code>: odhad ve stylu ZNE vypočtený z dostupných dat škálovaných podle šumu. V současnosti se k tomu používá exponenciální extrapolace.</p>
 </li>
 <li class="">
-<p><code>noise_scaling.results_with_REM</code>: očekávané hodnoty při různých škálách šumu, vždy s mitigací výčtu (REM).</p>
+<p><code>noise_scaling.results_with_REM</code>: očekávané hodnoty při různých škálách šumu, vždy s mitigací chyb čtení (REM).</p>
 </li>
 </ul>
 <p>Jemný, ale důležitý detail je, že výsledek při škále <code>1.0</code> není totéž co výsledek <code>unmitigated</code>. Oba odpovídají úrovni šumu fyzického zařízení, ale bod se škálou <code>1.0</code> zahrnuje mitigaci výčtu, zatímco <code>unmitigated</code> ji nezahrnuje.</p>
