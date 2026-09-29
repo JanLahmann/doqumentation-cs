@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.8b09d07e.js" defer="defer"></script>
-<script src="/assets/js/main.15f156dd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3d4a0c27.js" defer="defer"></script>
+<script src="/assets/js/main.3246ba32.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/configure-qiskit-local" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -38,7 +38,7 @@
 <p><code>circuit_mpl_style</code>: Výchozí styl použitý pro výstupní systém mpl v kreslení obvodů. Platné hodnoty jsou <code>default</code> nebo <code>bw</code>.</p>
 </li>
 <li class="">
-<p><code>circuit_mpl_style_path</code>: Cesty, kde má vyhledávat kreslení obvodů soubory stylů JSON při použití výstupního režimu mpl.</p>
+<p><code>circuit_mpl_style_path</code>: Cesty, ve kterých kreslení obvodů hledá soubory stylů JSON při použití výstupního režimu mpl.</p>
 </li>
 <li class="">
 <p><code>state_drawer</code>: Slouží ke změně výchozího systému pro metody vizualizace stavu. Platné hodnoty jsou <code>repr</code>, <code>text</code>, <code>latex</code>, <code>latex_source</code>, <code>qsphere</code>, <code>hinton</code> nebo <code>bloch</code>. Pokud není kwarg output explicitně zadán u metody <a class="" href="/api/qiskit/qiskit.quantum_info.DensityMatrix#densitymatrix">qiskit.quantum_info.DensityMatrix.draw</a>, použije se zadaný výstupní způsob.</p>
@@ -76,7 +76,7 @@
 <p><code>QISKIT_FORCE_THREADS</code>: Určuje, že vícevláknový kód má vždy běžet ve více vláknech. Ve výchozím nastavení platí, že pokud spouštíš vícevláknový kód v části Qiskitu, která již běží v paralelních procesech, Qiskit nespustí více vláken, ale místo toho tuto funkci provede sériově. Tím se zabrání potenciálnímu přetížení omezených prostředků CPU. Pokud však chceš vynutit použití více vláken i v multiprocessovém kontextu, nastav <code>QISKIT_FORCE_THREADS=TRUE</code>.</p>
 </li>
 <li class="">
-<p><code>QISKIT_SABRE_ALL_THREADS</code>: Řídí chování průchodu rozložení a směrování v přednastavené správě průchodů Qiskitu. Pokud je nastaveno na <code>1</code> nebo <code>TRUE</code>, použijí se všechna dostupná CPU pro spuštění více náhodných pokusů. To může zlepšit kvalitu výsledků, zejména u systémů s více než 20 CPU/jádry; nevýhodou však je, že výsledky nejsou reprodukovatelné při spuštění na jiném lokálním hardwaru.</p>
+<p><code>QISKIT_SABRE_ALL_THREADS</code>: Řídí chování průchodu rozložení a směrování v přednastaveném správci průchodů Qiskitu. Pokud je nastaveno na <code>1</code> nebo <code>TRUE</code>, použijí se všechna dostupná CPU pro spuštění více náhodných pokusů. To může zlepšit kvalitu výsledků, zejména u systémů s více než 20 CPU/jádry; nevýhodou však je, že výsledky nejsou reprodukovatelné při spuštění na jiném lokálním hardwaru.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Další kroky<a href="#next-steps" class="hash-link" aria-label="Přímý odkaz na Další kroky" title="Přímý odkaz na Další kroky" translate="no">​</a></h2>
