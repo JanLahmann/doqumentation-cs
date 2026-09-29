@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a5ca875f.js" defer="defer"></script>
-<script src="/assets/js/main.df681534.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7a8cef0d.js" defer="defer"></script>
+<script src="/assets/js/main.0c70841e.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-qiskit" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-qiskit" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,7 +28,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="january-2026">Leden 2026<a href="#january-2026" class="hash-link" aria-label="Přímý odkaz na Leden 2026" title="Přímý odkaz na Leden 2026" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>Na základě dynamiky vytvořené napříč sérií v2.x, která se soustředila na pozicování Qiskit jako přední platformy pro hybridní kvantově-HPC workflow, přináší <a href="https://www.ibm.com/quantum/blog/qiskit-2-3-release-summary" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK v2.3</a> výrazné rozšíření C API spolu s rychlejšími a flexibilnějšími nástroji pro vytváření a optimalizaci kvantových obvodů.</p>
+<p><a href="https://www.ibm.com/quantum/blog/qiskit-2-3-release-summary" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK v2.3</a> navazuje na řadu v2.x, jejímž cílem bylo etablovat Qiskit jako přední platformu pro hybridní kvantově-HPC workflow, a přináší výrazné rozšíření C API spolu s rychlejšími a flexibilnějšími nástroji pro vytváření a optimalizaci kvantových obvodů.</p>
 <p>Mezi hlavní aktualizace patří:</p>
 <ul>
 <li class="">
@@ -41,7 +41,7 @@
 <p><strong>Nové vícequbitové Pauliho měření</strong> - Nová instrukce <code>PauliProductMeasurement</code> umožňuje společné projektivní měření napříč více qubity v jedné operaci, což otevírá cestu ke kompilaci do výpočtu založeného na Pauliho operátorech - běžné reprezentaci v kvantovém výpočtu odolném vůči chybám.</p>
 </li>
 <li class="">
-<p><strong>Vylepšení rané transpilace odolné vůči chybám</strong> - Vylepšení výkonu a funkcí pro transpilaci k raným cílům odolným vůči chybám - zejména cílům Clifford+T - pomáhají uživatelům efektivněji vytvářet transpilační pipeline pro budoucí QPU.</p>
+<p><strong>Vylepšení transpilace pro rané systémy odolné vůči chybám</strong> - Vylepšení výkonu a funkcí pro transpilaci k raným cílům odolným vůči chybám - zejména cílům Clifford+T - pomáhají uživatelům efektivněji vytvářet transpilační pipeline pro budoucí QPU.</p>
 </li>
 </ul>
 <p>Tyto schopnosti dávají vývojářům větší flexibilitu při přizpůsobování optimalizací kvantových obvodů a integraci se stávajícími HPC workflow. <a href="https://www.ibm.com/quantum/blog/qiskit-2-3-release-summary" target="_blank" rel="noopener noreferrer" class="">Podívej se na blog</a> pro úplné technické shrnutí.</p>
